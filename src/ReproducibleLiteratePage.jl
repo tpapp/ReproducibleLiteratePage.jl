@@ -1,6 +1,3 @@
-"""
-Placeholder for a short summary about ReproducibleLiteratePage.
-"""
 module ReproducibleLiteratePage
 
 export compile_directory
