@@ -1,6 +1,6 @@
 # ReproducibleLiteratePage.jl
 
-![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)<!--
+![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)
 [![build](https://github.com/tpapp/ReproducibleLiteratePage.jl/workflows/CI/badge.svg)](https://github.com/tpapp/ReproducibleLiteratePage.jl/actions?query=workflow%3ACI)
 [![codecov.io](http://codecov.io/github/tpapp/ReproducibleLiteratePage.jl/coverage.svg?branch=master)](http://codecov.io/github/tpapp/ReproducibleLiteratePage.jl?branch=master)
 
