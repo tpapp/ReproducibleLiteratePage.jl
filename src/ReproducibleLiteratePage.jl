@@ -2,6 +2,7 @@ module ReproducibleLiteratePage
 
 export compile_directory
 
+using DocStringExtensions: SIGNATURES
 import Literate
 import Tar
 import Pkg
@@ -51,11 +52,11 @@ function compile_directory(dir; source = DEFAULT_SOURCE, archive = DEFAULT_ARCHI
     tar_file = joinpath(dir, archive)
     tar_files(tar_file, dir; source)
     Pkg.activate(dir)
-    @show dir
     Literate.markdown(src_file, dir;
                       postprocess = s -> s * generate_footer(tar_file),
                       execute = true,
-                      config = false)
+                      config = Dict("credit" => false), # we add credits back in footer
+                      )
 end
 
 end # module
