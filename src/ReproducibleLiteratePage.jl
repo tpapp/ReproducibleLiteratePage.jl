@@ -46,8 +46,10 @@ $(SIGNATURES)
 
 Compile `joinpath(dir, source)` using `Literate.markdown`, put the source, manifest, and
 project files in an archive, add it as a footer.
+
+`dir` defaults to `pwd()`.
 """
-function compile_directory(dir; source = DEFAULT_SOURCE, archive = DEFAULT_ARCHIVE)
+function compile_directory(dir = pwd(); source = DEFAULT_SOURCE, archive = DEFAULT_ARCHIVE)
     src_file = joinpath(dir, source)
     tar_file = joinpath(dir, last(splitpath(dir)) * "_" * archive)
     create_archive(tar_file, dir; source)
