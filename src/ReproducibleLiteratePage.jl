@@ -57,6 +57,7 @@ function compile_directory(dir = pwd(); source = DEFAULT_SOURCE, archive = DEFAU
     Literate.markdown(src_file, dir;
                       postprocess = s -> s * generate_footer(tar_file),
                       execute = true,
+                      flavor = Literate.FranklinFlavor(),
                       config = Dict("credit" => false), # we add credits back in footer
                       )
 end
