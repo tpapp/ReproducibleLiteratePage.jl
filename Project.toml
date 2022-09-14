@@ -11,7 +11,7 @@ Tar = "a4e569a6-e804-4fa4-b0f3-eef7a1d5b13e"
 
 [compat]
 julia = "1.6"
-DocStringExtensions = "0.9"
+DocStringExtensions = "0.7, 0.8, 0.9"
 Literate = "2"
 Tar = "1"
 
