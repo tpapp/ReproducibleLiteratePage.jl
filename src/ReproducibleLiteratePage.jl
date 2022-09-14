@@ -21,7 +21,7 @@ $(SIGNATURES)
 
 Put the source, project, and manifest files in `archive_name` using `tar`.
 """
-function tar_files(archive_name, dir; source = DEFAULT_SOURCE)
+function create_archive(archive_name, dir; source = DEFAULT_SOURCE)
     Tar.create(dir, archive_name) do p
         relpath(p, dir) in ["Project.toml", "Manifest.toml", source]
     end
@@ -49,8 +49,8 @@ project files in an archive, add it as a footer.
 """
 function compile_directory(dir; source = DEFAULT_SOURCE, archive = DEFAULT_ARCHIVE)
     src_file = joinpath(dir, source)
-    tar_file = joinpath(dir, archive)
-    tar_files(tar_file, dir; source)
+    tar_file = joinpath(dir, last(splitpath(dir)) * "_" * archive)
+    create_archive(tar_file, dir; source)
     Pkg.activate(dir)
     Literate.markdown(src_file, dir;
                       postprocess = s -> s * generate_footer(tar_file),
