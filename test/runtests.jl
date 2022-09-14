@@ -17,5 +17,4 @@ using Test
     @test startswith(result, "+++\nvar = 42\n+++\n")           # fence preserved
     @test occursin(ReproducibleLiteratePage.DIV_CLASS, result) # div present
     @test isfile(tar_file)                                     # tar file created
-
 end
