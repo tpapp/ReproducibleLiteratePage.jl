@@ -34,10 +34,14 @@ Generate a footer for the page, wrapping in [`DIV_CLASS`](@ref).
 """
 function generate_footer(archive_name)
     """
+    ~~~
     <div class="$(DIV_CLASS)">
-    This page was generated using [Literate.jl](https://github.com/fredrikekre/Literate.jl).
-    Download [the source, project, and manifest]($(archive_name)).
+    ~~~
+    This page was generated using [Literate.jl](https://github.com/fredrikekre/Literate.jl).\\
+    Download [the source, project, and manifest]($(last(splitdir(archive_name)))).
+    ~~~
     </div>
+    ~~~
     """
 end
 

@@ -37,10 +37,14 @@ A file we will compile
 2
 ````
 
+~~~
 <div class="source_footer">
-This page was generated using [Literate.jl](https://github.com/fredrikekre/Literate.jl).
-Download [the source, project, and manifest](/home/tamas/code/julia/ReproducibleLiteratePage/test/example/example_source.tar).
+~~~
+This page was generated using [Literate.jl](https://github.com/fredrikekre/Literate.jl).\
+Download [the source, project, and manifest](example_source.tar).
+~~~
 </div>
+~~~
 ```
 
 Note the code fence, which can be used to add page variables with [Franklin.jl](https://franklinjl.org/).
