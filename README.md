@@ -22,7 +22,7 @@ I am using it for my [blog](https://www.tamaspapp.eu), and currently do not plan
 
 will be compiled into
 
-```markdown
+`````markdown
 +++
 var = 42
 +++
@@ -45,6 +45,6 @@ Download [the source, project, and manifest](example_source.tar).
 ~~~
 </div>
 ~~~
-```
+`````
 
 Note the code fence, which can be used to add page variables with [Franklin.jl](https://franklinjl.org/).
