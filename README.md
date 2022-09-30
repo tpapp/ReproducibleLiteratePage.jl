@@ -48,3 +48,9 @@ Download [the source, project, and manifest](example_source.tar).
 `````
 
 Note the code fence, which can be used to add page variables with [Franklin.jl](https://franklinjl.org/).
+
+## About the package name
+
+The term “reproducible” here refers to the [*explicit environment*](https://pkgdocs.julialang.org/v1/glossary/). Note that despite best effort, *computational results* may not be fully reproducible in Julia (eg floating point results can depend on the architecture and compilation options), and this package does not aim to guarantee anything about that. The purpose of this package is to bundle short code examples with their environment so that users can keep running them in the future as package versions move on.[^1]
+
+[^1]: Note that sources for unregistered packages can also become unavailable.
